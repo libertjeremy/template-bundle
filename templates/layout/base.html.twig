@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale|default('fr') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>
+        {% block title %}
+            {% include '@Template/layout/_head_title.html.twig' %}
+        {% endblock %}
+    </title>
+
+    {% block stylesheets %}
+        {% include '@Template/layout/_stylesheets.html.twig' %}
+    {% endblock %}
+
+    {% block head %}
+        {% include '@Template/layout/_head.html.twig' %}
+    {% endblock %}
+</head>
+<body {% block body_class %}{% endblock body_class %}>
+{% block header %}
+    {% include '@Template/layout/_body_header.html.twig' %}
+{% endblock %}
+
+<main>
+    {% block body %}
+        {% include '@Template/layout/_body.html.twig' %}
+    {% endblock %}
+</main>
+
+{% block footer %}
+    {% include '@Template/layout/_body_footer.html.twig' %}
+{% endblock %}
+
+{% block javascripts %}
+    {% include '@Template/layout/_javascripts.html.twig' %}
+{% endblock %}
+</body>
+</html>

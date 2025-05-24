@@ -1,0 +1,20 @@
+{
+    "name": "libertjeremy/template-bundle",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "libertjeremy",
+            "email": "contact@libertjeremy.fr"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "libertjeremy/symfony-config-helpers": "^1.0",
+        "symfony/twig-bundle": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "LibertJeremy\\Symfony\\TemplateBundle\\": "src/"
+        }
+    }
+}
