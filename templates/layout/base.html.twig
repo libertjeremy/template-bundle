@@ -9,9 +9,9 @@
     <link rel="canonical" href="{% block canonical_url %}{{ app.request.uri }}{% endblock %}">
 
     <title>
-        {% block title %}
-            {% include '@Template/layout/_head_title.html.twig' %}
-        {% endblock %}
+        {%- block title -%}
+            {%- include '@Template/layout/_head_title.html.twig' -%}
+        {%- endblock -%}
     </title>
 
     {% block stylesheets %}
