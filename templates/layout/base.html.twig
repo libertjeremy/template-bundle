@@ -19,7 +19,9 @@
         {% include '@Template/layout/_head.html.twig' %}
     {% endblock %}
 </head>
-<body {% block body_class %}{% endblock body_class %}>
+<body
+    class="{% block body_class %}{% endblock body_class %}"
+>
 {% block header %}
     {% include '@Template/layout/_body_header.html.twig' %}
 {% endblock %}
