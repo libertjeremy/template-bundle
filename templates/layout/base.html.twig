@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <meta name="language" content="{{ app.request.locale }}">
+    <link rel="canonical" href="{% block canonical_url %}{{ app.request.uri }}{% endblock %}">
+
     <title>
         {% block title %}
             {% include '@Template/layout/_head_title.html.twig' %}
