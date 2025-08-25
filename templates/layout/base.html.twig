@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ app.request.locale|default('fr') }}">
+{% set current_request = app.request %}
+{% set current_locale = current_request.locale|default('fr') %}
+
+<html lang="{{ current_locale }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="language" content="{{ app.request.locale }}">
-    <base href="{% block meta_base_href %}{{ app.request.uri }}{% endblock meta_base_href %}"/>
-    <link rel="canonical" href="{% block canonical_url %}{{ app.request.uri }}{% endblock %}">
+    <meta name="language" content="{{ current_locale }}">
+    <base href="{% block meta_base_href %}{{ current_request.uri }}{% endblock meta_base_href %}"/>
+    <link rel="canonical" href="{% block canonical_url %}{{ current_request.uri }}{% endblock %}">
 
     <title>
         {%- block title -%}
