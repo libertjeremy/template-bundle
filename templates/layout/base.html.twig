@@ -33,9 +33,11 @@
     {% include '@Template/layout/_body_header.html.twig' %}
 {% endblock %}
 
-{% block body %}
-    {% include '@Template/layout/_body.html.twig' %}
-{% endblock %}
+<main>
+    {% block body %}
+        {% include '@Template/layout/_body.html.twig' %}
+    {% endblock %}
+</main>
 
 {% block footer %}
     {% include '@Template/layout/_body_footer.html.twig' %}
